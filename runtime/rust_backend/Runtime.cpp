@@ -282,7 +282,7 @@ SymExpr _sym_build_float_to_unsigned_integer(SymExpr expr, uint8_t bits) {
 
 SymExpr _sym_build_bool_to_bit(SymExpr expr) {
   return registerExpression(
-      symexpr(_rsym_build_bool_to_bit(symexpr_id(expr))));
+      symexpr(_rsym_build_bool_to_bit(symexpr_id(expr)), 1));
 }
 
 void _sym_push_path_constraint(SymExpr constraint, int taken,
