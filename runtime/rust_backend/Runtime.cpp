@@ -120,7 +120,7 @@ SymExpr _sym_build_integer128(uint64_t high, uint64_t low) {
 
 SymExpr _sym_build_integer_from_buffer(void *buffer, unsigned num_bits) {
   return registerExpression(
-      symexpr(_rsym_build_integer_from_buffer(buffer, num_bits)));
+      symexpr(_rsym_build_integer_from_buffer(buffer, num_bits), num_bits));
 }
 
 SymExpr _sym_build_float(double value, int is_double) {
